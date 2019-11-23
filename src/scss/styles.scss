@@ -1,0 +1,311 @@
+@import "variables.scss";
+
+body {
+  margin: 0;
+  font-family: "Gotham", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: "Gotham", sans-serif;
+}
+
+.background {
+  background-color: $blue-dark;
+  height: 100%;
+  min-height: 100vh;
+  padding-bottom: 20px;
+}
+
+.nav {
+  background-color: $black;
+  height: 5rem;
+  border-bottom: 2px solid rgba(0,0,0,.1);
+  // padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-logo{
+  font-size: 2rem;
+  margin-right: 2rem;
+  margin-left: 1.5rem;
+  margin-top: 10px;
+  color: $white;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 285px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo-image{
+  width: 100px;
+  height: auto;
+}
+
+.nav-link {
+  font-size: 1rem;
+  color: $color-primary;
+  margin: 1rem;
+  text-transform: uppercase;
+}
+
+.nav-link a {
+  color: $color-primary;
+  text-decoration: none;  
+}
+
+.nav-link :hover {
+  color: $color-highlight;
+  text-decoration: underline;
+}
+
+.nav-item {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.users-container {
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  text-align: center;
+  max-width: 400px;
+}
+
+.page {
+  height: 100%;
+
+  //margin-right: auto;
+  //margin-bottom: 20px;
+  //margin-left: auto;
+  //padding: 30px;
+  background-color: $white;
+}
+
+
+// email input component
+
+.email-signup {
+  width: 100%;
+  text-align: center;
+}
+
+.email-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.email-input {
+  font-size: .875rem;
+  line-height: 2.5rem;
+  width: 70%;
+  padding-left: .75rem;
+}
+
+.email-signup-button {
+  font-size: .5rem;
+  line-height: 2.5rem;
+  border: 1.5px solid $color-primary;
+  background-color: $color-primary;
+  color: $white;
+  width: 25%;
+  margin-left: 10px;
+}
+
+.email-signup-button:hover {
+  text-decoration: underline;
+}
+
+// hero component
+.hero {
+  position: relative;
+  background-color: $black;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/bg-map.jpg');
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  //transform: scale(2);
+}
+
+.hero-background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-content-container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.hero-logo{
+  margin-bottom: 30px;
+  max-width: 175px;
+}
+
+.hero-title {
+  color: $white;
+  font-weight: 500;
+}
+
+// feature component
+.feature {
+  // background-color: #666;
+  // height: 100%;
+  // width: 50%;
+  margin: 0;
+  position: relative;
+
+}
+
+.feature-background-right {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: $black;
+  z-index: 10;
+  @media (max-width: 767px){
+    width: 100%;
+    background-color: $white;
+  }
+}
+
+.feature-background-left {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: $black;
+  z-index: 10;
+  @media (max-width: 767px){
+    width: 100%;
+    background-color: $white;
+  }
+}
+
+.feature-content-container-right {
+  position: relative;
+  z-index: 100;
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem;
+  display: flex;
+  @media (max-width: 767px){
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+}
+
+.feature-content-container-left {
+  position: relative;
+  z-index: 100;
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem;
+  display: flex;
+  flex-direction: row-reverse;
+  @media (max-width: 767px){
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+}
+
+.feature-background-image {
+  width: 60;
+}
+
+.feature-image-container-right {
+  width: 60%;
+  min-height: 400px;
+  //background-image: url("https://placebear.com/g/200/300");
+  background-size: cover;
+  text-align: left;
+  @media (max-width: 767px){
+    width: 100%;
+  }
+}
+
+.feature-image-container-left {
+  width: 60%;
+  max-height: 400px;
+  //background-image: url("https://placebear.com/g/200/300");
+  background-size: cover;
+  text-align: right;
+  @media (max-width: 767px){
+    width: 100%;
+  }
+}
+
+.feature-image {
+  //width: 50%;
+  max-height: 300px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.feature-content-container {
+  width: 40%;
+  margin-top: auto;
+  margin-bottom: auto;
+  @media (max-width: 767px){
+    width: 100%;
+    background-color: $white;
+    //padding: 1rem;
+  }
+}
+
+.feature-content {
+  //width: 35%;
+  text-align: left;
+  //background-color: #99ff00;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  padding: 1.75rem;
+
+  .feature-header {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 767px){
+    max-width: 100%;
+    background-color: $white;
+    //padding: 1rem;
+  }
+}
+
+
+// media query breakpoints
+// @media (min-width: 576px){}
+// @media (min-width: 768px){}
+// @media (min-width: 992px){}
+// @media (min-width: 1200px){}
