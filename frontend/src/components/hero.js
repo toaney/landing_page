@@ -1,11 +1,9 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { userSearch, updateHandle } from '../actions/twitterFeedAction';
 import EmailSignup from "./emailSignup";
 // import { connect } from 'react-redux';
 
 const Hero = ({backgroundImage, heroTitle, heroCaption}) => {
-    const [ searchInput, setSearchInput ] = React.useState("");
     const dispatch = useDispatch();
 
     return(

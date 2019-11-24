@@ -34,7 +34,7 @@ After backend server dependencies have been installed, run 'npm start' to run th
 npm start
 ```
 
-Once both Frontend and Backend are running, you will be able to access the Application from your local browser at http://localhost:3000/.
+Once both the frontend and backend are running, you will be able to access the Application from your local browser at http://localhost:3000/.
 
 ## Authors
 
