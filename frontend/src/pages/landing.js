@@ -3,7 +3,7 @@ import Hero from '../components/hero';
 import Feature from '../components/feature';
 import axios from 'axios';
 
-const Home = () => {
+const Landing = () => {
     const [assets, setAssets] = React.useState([]);
 
     const get_assets = () => {
@@ -42,4 +42,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Landing;
