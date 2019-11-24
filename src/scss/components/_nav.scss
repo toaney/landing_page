@@ -1,0 +1,62 @@
+// nav component
+.nav {
+    background-color: $black;
+    height: 5rem;
+    border-bottom: 2px solid rgba(0,0,0,.1);
+    // padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .nav-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .nav-logo{
+    font-size: 2rem;
+    margin-right: 2rem;
+    margin-left: 1.5rem;
+    margin-top: 10px;
+    color: $white;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 285px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-logo-image{
+    width: 100px;
+    height: auto;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    color: $color-primary;
+    margin: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .nav-link a {
+    color: $color-primary;
+    text-decoration: none;  
+  }
+  
+  .nav-link :hover {
+    color: $color-highlight;
+    text-decoration: underline;
+  }
+  
+  .nav-item {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }

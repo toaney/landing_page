@@ -2,17 +2,67 @@ import React from 'react';
 import Search from '../components/search';
 import Hero from '../components/hero';
 import Feature from '../components/feature';
+import axios from 'axios';
 
 const Home = () => {
+    const [assets, setAssets] = React.useState([]);
+    const [positionRight, setPositionRight] = React.useState(true);
+
+    // const toggleContent = () => {
+    //     setPositionRight(!positionRight)
+    // }
+
+    const get_assets = () => {
+        axios
+        .get("/travel-assets")
+        .then(res => {
+            console.log(res)
+            setAssets(res.data)
+            // console.log(res);
+            // if (res.data.status === "ok") {
+            // console.log("valid")
+            // //setShowSuccess(true)
+            // } else {
+            // console.log("also valid")
+            // //setShowError(true)
+            // }
+            // // document.cookie = "username=username"; //set cookies with key/value pairs
+            // // document.cookie = "password=password"; //set cookies with key/value pairs
+            // console.log(res);
+        })
+        .catch((err) => {
+            console.log(err)
+            //setShowError(true)
+        });
+    };
+
+    React.useEffect(() => {
+        get_assets();
+        // signalUpdateNotes();
+    }, []);
+
     return (
         <div className="page">
             <Hero 
                 backgroundImage=""
                 heroTitle="Earn 4x on Travel or Use Points to Pay"
             />
+            {assets.map( (item, index) => (
+                //toggleContent(),
+                // console.log("num"),
+                <Feature 
+                    contentRight = {(index%2 === 0)? true : false}
+                    featureTitle = {item.captionTitle}
+                    captionBody = {item.captionBody}
+                    backgroundImage = {item.backgroundImage}
+                    featureImage = {item.featureImage}
+                    featureImageAltText = {item.featureImageAltText}
+                />
+                //setPositionRight(!positionRight)
+            ))}
             {/* // data=content-left
             // or data= content=right */}
-            <Feature 
+            {/* <Feature 
                 contentRight={true}
                 backgroundImage = "/feature-booking.jpg"
                 featureImage = "/feature-booking-highlight.png"
@@ -39,7 +89,7 @@ const Home = () => {
                 featureImage = "/feature-savings-highlight.png"
                 featureTitle = "Get access to corporate rates and unmatched inventory"
                 captionBody = "Brex travel gives you access to negotiated rates and inventory traditionally only accessible to large enterprises. While typical saving may be 30%, you can save up to as much as 60% on some bookings. Brex also gives you access to an unmatched inventory of airline and lodging options, including Airbnb."
-            />
+            /> */}
         </div>
     )
 }

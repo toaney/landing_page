@@ -1,0 +1,125 @@
+// feature component
+.feature {
+    margin: 0;
+    position: relative;
+  }
+  
+  .feature-background-right {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: $black;
+    z-index: 10;
+    @media (max-width: 767px){
+      width: 100%;
+      background-color: $white;
+    }
+  }
+  
+  .feature-background-left {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: $black;
+    z-index: 10;
+    @media (max-width: 767px){
+      width: 100%;
+      background-color: $white;
+    }
+  }
+  
+  .feature-content-container-right {
+    position: relative;
+    z-index: 100;
+    max-width: 1000px;
+    margin: auto;
+    padding: 3rem;
+    display: flex;
+    @media (max-width: 767px){
+      flex-direction: column-reverse;
+      padding: 0;
+    }
+  }
+  
+  .feature-content-container-left {
+    position: relative;
+    z-index: 100;
+    max-width: 1000px;
+    margin: auto;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row-reverse;
+    @media (max-width: 767px){
+      flex-direction: column-reverse;
+      padding: 0;
+    }
+  }
+  
+  .feature-background-image {
+    width: 60;
+  }
+  
+  .feature-image-container-right {
+    width: 60%;
+    min-height: 400px;
+    //background-image: url("https://placebear.com/g/200/300");
+    background-size: cover;
+    text-align: left;
+    @media (max-width: 767px){
+      width: 100%;
+    }
+  }
+  
+  .feature-image-container-left {
+    width: 60%;
+    max-height: 400px;
+    //background-image: url("https://placebear.com/g/200/300");
+    background-size: cover;
+    text-align: right;
+    @media (max-width: 767px){
+      width: 100%;
+    }
+  }
+  
+  .feature-image {
+    //width: 50%;
+    max-height: 300px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .feature-content-container {
+    width: 40%;
+    margin-top: auto;
+    margin-bottom: auto;
+    @media (max-width: 767px){
+      width: 100%;
+      background-color: $white;
+      //padding: 1rem;
+    }
+  }
+  
+  .feature-content {
+    //width: 35%;
+    text-align: left;
+    //background-color: #99ff00;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    padding: 1.75rem;
+  
+    .feature-header {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+  
+    @media (max-width: 767px){
+      max-width: 100%;
+      background-color: $white;
+      //padding: 1rem;
+    }
+  }

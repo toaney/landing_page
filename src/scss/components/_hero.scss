@@ -1,0 +1,39 @@
+// hero component
+.hero {
+    position: relative;
+    background-color: $black;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/bg-map.jpg');
+    min-height: 600px;
+    display: flex;
+    //align-items: center;
+    //transform: scale(2);
+  }
+  
+  .hero-background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .hero-content-container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    text-align: center;
+    padding: 4rem 1.5rem;
+  }
+  
+  .hero-logo{
+    margin-bottom: 30px;
+    max-width: 175px;
+  }
+  
+  .hero-title {
+    color: $white;
+    font-weight: 500;
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+  }

@@ -1,0 +1,25 @@
+{
+  "name": "brex-travel",
+  "version": "1.0.0",
+  "description": "Website team interview challenge",
+  "main": "index.ts",
+  "scripts": {
+    "build": "babel src -d src/build --copy-files",
+    "serve": "npm run build && node src/build/index.js",
+    "start": "npm run serve",
+    "develop": "nodemon --exec babel-node src --copy-files"
+  },
+  "author": "Abiel Gutierrez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "yup": "^0.26.10"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4"
+  }
+}
