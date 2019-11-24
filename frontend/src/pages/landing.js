@@ -24,8 +24,9 @@ const Home = () => {
     return (
         <div className="page">
             <Hero 
-                backgroundImage=""
+                heroBackground=""
                 heroTitle="Earn 4x on Travel or Use Points to Pay"
+                heroCaption=""
             />
             {assets.map( (item, index) => (
                 <Feature 
