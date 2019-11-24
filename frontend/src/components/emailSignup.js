@@ -53,7 +53,8 @@ const EmailSignup = () => {
                 }}></input>
                 <button 
                     type="submit"
-                    className="email-signup-button" 
+                    className="email-signup-button"
+                    id="email-signup-button" 
                     aria-label="submit email" 
                 >SIGN UP</button>
             </form>

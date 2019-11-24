@@ -36,6 +36,14 @@ npm start
 
 Once both the frontend and backend are running, you will be able to access the Application from your local browser at http://localhost:3000/.
 
+## Testing
+
+To run unit tests for components, run "npm test" from the frontend directory.
+
+```
+npm test
+```
+
 ## Authors
 
 * **Thomas Toan** - *Software Engineer* 

@@ -19,7 +19,7 @@ const Feature = ({contentRight, backgroundImage, featureImage, featureImageAltTe
                     <div className="feature-content-container">
                         <div className="feature-content">
                             <h2 className="feature-header" tabindex="0">{featureTitle}</h2>
-                            <p>{captionBody}</p>
+                            <p className="feature-caption">{captionBody}</p>
                         </div>
                     </div>
                 </div>
