@@ -5,7 +5,7 @@ const Nav = () => {
     return (
         <div className="nav">
             <div className="nav-left">
-                <span className="nav-logo"><Link to="/"><img className="nav-logo-image" src="/brex-logo.svg" /></Link></span>
+                <span className="nav-logo"><Link to="/"><img className="nav-logo-image" alt="brex logo" src="/brex-logo.svg" /></Link></span>
                 {/* <span className="nav-link"><Link to="/home">homepage</Link></span> */}
             </div>
             {/* <div className="nav-right">

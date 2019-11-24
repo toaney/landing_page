@@ -6,6 +6,7 @@ const EmailSignup = () => {
     const [ showError, setShowError ] = React.useState(false);
     const [ showSuccess, setShowSuccess ] = React.useState(false);
 
+
     const post_signup = () => {
         const body = {
             email: emailInput

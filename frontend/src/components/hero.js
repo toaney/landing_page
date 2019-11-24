@@ -12,7 +12,7 @@ const Hero = ({backgroundImage, heroTitle, heroCaption}) => {
         <div className="hero">
             {/* <div className="hero-background"></div> */}
             <div className="hero-content-container">
-                <img className="hero-logo" alt="brex logo" src="brex-travel-logo.svg"/>
+                <img className="hero-logo"src="brex-travel-logo.svg" />
                 <h1 className="hero-title" tabindex="0">{heroTitle}</h1>
                 <EmailSignup />
             </div>
